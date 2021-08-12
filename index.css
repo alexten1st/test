@@ -1,0 +1,164 @@
+.button-container{
+    display: flex;
+    background: #2A2E38;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+body{
+    margin: 0;
+}
+.button{
+    border-radius: 45px;
+    display:table;
+    border: 2px solid #E5E5E5;
+    width: 180px;
+    height: 80px;    
+    text-align: center;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    
+}
+.btn-text{
+    color: #ffffff;
+    font-family: Quicksand;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 30px;
+    line-height: 100%;
+    vertical-align:middle;
+    
+}
+.button:hover{
+    cursor: pointer;
+    border: none;
+}
+.button:hover .btn-text{
+    color:black
+}
+
+.button::before{
+    position: absolute;
+    left: -260px;
+    top: 40px;
+    content: "";
+    width: 280px;
+    height: 380px;
+    background: white;
+    transform: rotate(-35deg);
+    transition: .3s;
+    z-index: -1;
+    
+
+    
+}
+.button:hover::before{
+    left:0px;
+    top:-40px;
+}
+.main-content{
+    display:none;
+}
+.displayNone{
+    position: absolute;
+    z-index: -1;
+}
+.main-content{
+    display: flex;
+    background:white;
+    background: url("./asserts/backIMG.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.back{
+    position: relative;
+    top: 10px;
+    left:85vw;
+    width: 180px;
+    height: 20px;
+    z-index: 1;
+}
+.content-page{
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+}
+.back:hover{
+    cursor: pointer;
+}
+.cardConteiner{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+    height: inherit;
+    margin-right: 10px;
+
+}
+.card{
+    background-color: #20232A;
+    width: 336px;
+    height: 226px;  
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    transition: .5s;
+    
+}
+.card:hover{
+    background-color: #3E65C2;
+}
+.cardTitle{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #E5E5E5;
+    font-family: Quicksand;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 30px;
+}
+.desc{
+    visibility: hidden;
+    margin-left: 20px;
+    font-family: Quicksand;
+    font-style: Medium;
+    color: #E5E5E5
+}
+.card:hover .desc{
+    visibility: visible;
+}
+.active {
+    background-color: rgb(29, 172, 185);
+    border: 4px solid rgb(0, 234, 255);
+}
+.cardDesc{
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: black;
+}
+.descDiv{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid white;
+    color: white;
+    height: 500px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
